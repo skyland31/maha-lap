@@ -54,7 +54,7 @@ class MahaLap {
     const resultDay = this.tamnaiWithDay(day);
     const resultStory = this.tamnaiWithStory(story);
     const resultTime = this.tamnaiWithTime(time);
-    return (resultDay * resultStory + 2 * resultTime * 100) % 1000;
+    return Math.ceil((resultDay * resultStory + 2 * resultTime * 100) % 1000);
   }
 }
 module.exports = MahaLap;
