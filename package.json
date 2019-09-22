@@ -1,0 +1,22 @@
+{
+  "name": "maha-lap",
+  "version": "1.0.0",
+  "description": "- อาทิตย์ 1\r - จันทร์ 2\r - อังคาร 3\r - พุธ 4\r - พฤหัสบดี 5\r - ศุกร์ 6\r - เสาร์ 7\r - สงกรานต์ 13\r - ฮาโลวีน 31\r - คริสมาสต์ 25",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skyland31/maha-lap.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skyland31/maha-lap/issues"
+  },
+  "homepage": "https://github.com/skyland31/maha-lap#readme",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
