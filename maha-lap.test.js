@@ -66,6 +66,11 @@ describe("Test Maha-Lap", () => {
     const result = MahaLab.tamnaiWithTime("กลางวัน");
     expect(result).toEqual(0.5);
   });
+  test("Test Tamai with time กลางวัน random = 0.5 return 0.5", () => {
+    global.Math.random = jest.fn(() => 0.5);
+    const result = MahaLab.tamnaiWithTime("กลางวัน");
+    expect(result).toEqual(0.5);
+  });
   test("Test Tamai with time กลางคืน random = 0.98 return 0.98", () => {
     global.Math.random = jest.fn(() => 0.98);
     const result = MahaLab.tamnaiWithTime("กลางคืน");
@@ -75,5 +80,40 @@ describe("Test Maha-Lap", () => {
     global.Math.random = jest.fn(() => 0.4);
     const result = MahaLab.tamnaiWithTime("กลางคืน");
     expect(result).toEqual(0.4);
+  });
+  test("Test Tamai with time กลางคืน random = 0.5 return 0.5", () => {
+    global.Math.random = jest.fn(() => 0.5);
+    const result = MahaLab.tamnaiWithTime("กลางคืน");
+    expect(result).toEqual(0.5);
+  });
+  test("Test Tamai with วันอาทิตย์ ตอนกลางวัน เห็นงู", () => {
+    global.Math.random = jest.fn(() => 0.5);
+    const result = MahaLab.namo("อาทิตย์", "งู", "กลางวัน"); // (1*3)+(2*0.5*100)
+    expect(result).toEqual(103);
+  });
+  test("Test Tamai with วันอาทิตย์ ตอนกลางวัน เห็นงู", () => {
+    global.Math.random = jest.fn(() => 0.4);
+    const result = MahaLab.namo("อาทิตย์", "งู", "กลางวัน"); // (1*3)+(2*0.5*100)
+    expect(result).toEqual(103);
+  });
+  test("Test Tamai with วันอาทิตย์ ตอนกลางวัน เห็นงู", () => {
+    global.Math.random = jest.fn(() => 0.6);
+    const result = MahaLab.namo("อาทิตย์", "งู", "กลางวัน"); // (1*3)+(2*0.6*100)
+    expect(result).toEqual(123);
+  });
+  test("Test Tamai with วันอาทิตย์ ตอนกลางคืน เห็นงู", () => {
+    global.Math.random = jest.fn(() => 0.5);
+    const result = MahaLab.namo("อาทิตย์", "งู", "กลางคืน"); // (1*3)+(2*0.5*100)
+    expect(result).toEqual(103);
+  });
+  test("Test Tamai with วันอาทิตย์ ตอนกลางคืน เห็นงู", () => {
+    global.Math.random = jest.fn(() => 0.6);
+    const result = MahaLab.namo("อาทิตย์", "งู", "กลางคืน"); // (1*3)+(2*0.5*100)
+    expect(result).toEqual(103);
+  });
+  test("Test Tamai with วันอาทิตย์ ตอนกลางคืน เห็นงู", () => {
+    global.Math.random = jest.fn(() => 0.4);
+    const result = MahaLab.namo("อาทิตย์", "งู", "กลางคืน"); // (1*3)+(2*0.4*100)
+    expect(result).toEqual(83);
   });
 });
